@@ -12,6 +12,11 @@ FlightAssignDestination::FlightAssignDestination(long long _id, FlightAssignAird
     m_airdrome = _airdrome;
 }
 
+FlightAssignDestination::~FlightAssignDestination()
+{
+    m_airdrome = NULL;
+}
+
 const FlightAssignAirdrome *FlightAssignDestination::airdrome() const
 {
     return m_airdrome;

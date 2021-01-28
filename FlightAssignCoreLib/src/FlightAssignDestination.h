@@ -13,6 +13,9 @@ public:
     //! Конструктор.
     FlightAssignDestination(long long _id, FlightAssignAirdrome *_airdrome);
 
+    //! Деструктор.
+    ~FlightAssignDestination();
+
     //! Возвращает аэродром.
     const FlightAssignAirdrome *airdrome() const;
     //! Задает аэродром.

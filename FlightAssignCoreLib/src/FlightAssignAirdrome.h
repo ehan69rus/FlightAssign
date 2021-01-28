@@ -6,8 +6,7 @@
 #include <QString>
 
 //! Аэродром
-class FlightAssignAirdrome : public FlightAssignBaseItem
-{
+class FlightAssignAirdrome : public FlightAssignBaseItem {
 public:
     //! Конструктор.
     FlightAssignAirdrome(long long _id, const QString &_name, const QString &_index);

@@ -9,7 +9,7 @@
 class FlightAssignDestination;
 
 //! Заявка
-class FlightAssignClaim : FlightAssignBaseItem {
+class FlightAssignClaim : public FlightAssignBaseItem {
 public:
     //! Конструктор.
     FlightAssignClaim(long long _id, const QString &_name, int _number);
@@ -31,6 +31,15 @@ public:
     QString information() const;
     //! Задает дополнительную информацию.
     void setInformation(const QString &_information);
+
+    //! Возвращает количество пунктов назначения.
+    int destinationsCount() const;
+    //! Добавляет заявку.
+    void addDestination(FlightAssignDestination *_destination);
+    //! Возвращает заявку.
+    FlightAssignDestination *destination(int _index) const;
+    //! Удаляет заявку.
+    void removeDestinationByNumber(int _index);
 
 private:
     //! Наименование.

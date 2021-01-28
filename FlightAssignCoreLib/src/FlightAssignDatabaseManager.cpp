@@ -1,16 +1,10 @@
 #include "FlightAssignDatabaseManager.h"
 
 #include <QString>
-#include <QSqlDatabase>
 
-FlightAssignDatabaseManager::FlightAssignDatabaseManager(const QSqlDatabase &_dbConnection) :
+FlightAssignDatabaseManager::FlightAssignDatabaseManager() :
     m_dataManager(NULL)
 {
-    if (!_dbConnection.isOpen()) {
-        throw QString::fromUtf8("Ошибка подключения базы данных");
-    }
-
-    m_dbConnection = _dbConnection;
 }
 
 void FlightAssignDatabaseManager::setDataManager(FlightAssignDataManager *_dataManager)
